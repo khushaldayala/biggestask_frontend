@@ -1,0 +1,31 @@
+<div class="row signin">
+    <div class="left d-flex-jcc-aic col-xl-6 col-lg-6 col-md-6 col-sm-10 col-10">
+        <div>
+            <h1>Sign In to continue</h1>
+            <form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)" >
+              <div class="inputDiv">
+                <label class="d-block" for="Email">EMAIL</label>
+                <input type="email" name="email" id="email" required email ngModel >
+                <span class="error">{{error}}</span>
+            </div>
+            <div class="inputDiv">
+                <div class="d-flex-jcsb-aic">
+                    <label for="password">PASSWORD</label>
+                    <a href="#">Forgot your password?</a>
+                </div>
+                <input type="password" name="password" id="password"  ngModel  required  >
+                <span class="error">{{error}}</span>
+            </div>
+            <button type="submit" class="{{disable ? 'disabled' : ''}}" >Sign In <i class="fa fa-long-arrow-right ml-4" aria-hidden="true"></i></button>
+            <button>Create an account</button>
+            </form>
+        </div>
+    </div>
+    <div class="right d-flex-jcc-aic col-xl-6 col-lg-6 col-md-6 col-sm-10 col-10">
+        <div>
+            <img src="../../assets/Images/signin.svg" alt="Image">
+        </div>
+        <h1>Welcome to The Biggest Ask</h1>
+        <p>Your surrogacy community</p>
+    </div>
+</div>

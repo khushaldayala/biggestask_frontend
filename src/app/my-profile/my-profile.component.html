@@ -1,0 +1,117 @@
+<app-navbar> </app-navbar>
+
+<section class="container custom">
+  <h1 class="profile">My Profile</h1>
+  <p class="prof">You can set preferred display name, create <span>your profile URL</span> and manage other personal
+    settings.</p>
+  <div class="row">
+    <div class=" col-md-6">
+      <div class="left">
+        <div class="img">
+          <img src="https://api.thebiggestask.org/images/profile/{{imgs}}" alt="simpsonImg">
+        </div>
+
+        <h1>{{data[0]['name']}}</h1>
+        <div class="line"></div>
+        <h3>
+          Adminstrator
+        </h3>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="right">
+        <h4 class="dark mb-4" data-photo>Profile photo</h4>
+        <!-- <p class="light">We recommend an imageof at least 400x400.</p> -->
+        <form #profileForm="ngForm" (ngSubmit)="onSubmit(profileForm.value)">
+          <div class="fileDiv">
+            <label for="file" class="fileBtn">
+              Upload Image
+            </label>
+            <input type="file" name="{{image}}" id="file" (change)="upload($event)">
+          </div>
+          <h2 class="dark">Account info</h2>
+          <div class="input">
+            <label for="name">Display name</label>
+            <input ngModel="{{data[0]['name']}}" name="name" required type="text" id="name" minlength="4">
+            <span class="error">{{error.name}}</span>
+          </div>
+          <div class="input">
+            <label for="email">E-mail</label>
+            <input name="email" type="email" id="email" required minlength="1" ngModel="{{data[0]['email']}}">
+            <span class="error">{{error.email}}</span>
+          </div>
+          <div class="input">
+            <label for="password">change password</label>
+            <input ngModel name="password" type="password" id="password" placeholder="•••••••••••••" data-toggle="modal"
+              data-target="#exampleModal1">
+          </div>
+          <div class="input">
+            <label for="insta">link to instagram</label>
+            <input ngModel="{{data[0]['insta']}}" type="text" id="insta" name="insta">
+            <span class="error">{{error.insta}}</span>
+
+          </div>
+          <div class="input">
+            <label for="forum">link to forum</label>
+            <input ngModel="{{data[0]['forum']}}" type="text" name="forum" id="forum">
+            <span class="error">{{error.forum}}</span>
+          </div>
+          <div class="input">
+            <label for="bio">bio</label>
+            <textarea type="text" name="bio" rows="3" ngModel="{{data[0]['bio']}}">
+              </textarea>
+            <span class="error">{{error.bio}}</span>
+            <input type="text" class="d-none" name="image" ngModel="{{image}}">
+          </div>
+          <button class="update {{ disable ? 'disabled' : ''}}" type="submit">Update Profile</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- change password Modal  -->
+
+  <form #changePass="ngForm" (ngSubmit)="changePassword(changePass.value)">
+    <div class="modal modal1 fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Change password</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i class="fa fa-close"></i>
+            </button>
+          </div>
+          <div class="mBody">
+            <p>
+              Integer nullam lorem ipsum, varius massa hac egestas. Diam ipsum ut lacus ut.
+            </p>
+            <div class="marginB">
+              <input type="text" ngModel name="old_password" placeholder="Old Password">
+              <span class="error">{{errorPass.old}}</span>
+            </div>
+            <div class="marginB">
+              <input type="text" ngModel name="new_password" placeholder="New Password">
+              <span class="error">{{errorPass.new}}</span>
+
+            </div>
+            <div class="marginB">
+              <input type="text" ngModel name="confirm_password" placeholder="Confirm Password">
+              <span class="error">{{errorPass.confirmed}}</span>
+
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" type="submit" class="{{disable ? 'disabled' : ''}}">Save & Continue</button>
+            <button type="button" class="cancel" data-dismiss="modal">Cancel</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </form>
+
+</section>

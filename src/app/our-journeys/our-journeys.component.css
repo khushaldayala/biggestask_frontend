@@ -1,0 +1,159 @@
+.jFlex {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 6.4rem 0;
+}
+
+.jFlex h1 {
+  font-size: 4.8rem;
+  color: var(--primary-font-color);
+  font-weight: 600;
+}
+
+div.position-relative {
+  width: 30rem;
+  margin-right: 4rem;
+}
+
+.jFlex input {
+  font-size: 1.4rem;
+  color: #a0a8b8;
+  border: 2px solid #e6e8ec;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  width: 100%;
+  font-weight: 500;
+}
+
+.jFlex input::placeholder {
+  font-size: 1.4rem;
+  color: #a0a8b8;
+}
+
+.fa-search {
+  color: #a0a8b8;
+  position: absolute;
+  right: 4%;
+  top: 30%;
+  font-size: 1.4rem;
+}
+
+.selectDiv {
+  border-radius: 9rem;
+  border: 2px solid #e6e8ec;
+  font-size: 1.4rem;
+  color: var(--blue-color);
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 19rem;
+}
+
+.selectDiv select {
+  background: transparent;
+  border: 0;
+  color: var(--blue-color);
+  font-weight: 600;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* CARDS  Design */
+
+.cardDiv {
+  background: #fff;
+  border: 1px solid #ccdef1;
+  box-shadow: 0px 4px 20px rgba(27, 25, 86, 0.05);
+  border-radius: 1.6rem;
+  padding: 2rem;
+  margin-bottom: 2.4rem;
+  cursor: pointer;
+}
+
+.row .col-md-4:first-child .cardDiv {
+  background: #f9fcff;
+}
+
+.journey {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.journey h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--secondary-font-color);
+}
+
+.dots {
+  width: 3.2rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid var(--secondary-font-color);
+  cursor: pointer;
+}
+
+.dots .fa {
+  font-size: 1.5rem;
+}
+
+.cardDiv h3 {
+  font-size: 1.6rem;
+  color: var(--secondary-font-color);
+  font-weight: 600;
+  margin-bottom: 1.6rem;
+}
+
+.cardDiv h3 a {
+  text-decoration: underline;
+  color: var(--blue-color);
+  font-size: 1.4rem;
+}
+
+.parentDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.6rem;
+}
+
+.parentDiv div[data-flex] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div[data-flex] img {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 2rem;
+}
+
+.parentDiv h5 {
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--secondary-font-color);
+}
+
+.parentDiv h6 {
+  color: var(--blue-color);
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.svgImg {
+  margin-right: 0.6rem;
+}
+
+.p-None {
+  pointer-events: none;
+}

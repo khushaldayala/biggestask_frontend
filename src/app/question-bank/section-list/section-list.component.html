@@ -1,0 +1,206 @@
+<div class="heading">
+  <h1> Question Bank </h1>
+  <button class="cateBtn" data-toggle="modal" data-target="#exampleModal20" (click)="newQuestion()"> +  Create New
+    Question
+  </button>
+
+</div>
+
+
+<div class="mainContainer">
+  <div *ngIf="month.monthone == '1'">
+    <div class="cateDiv">
+      <div class="food">
+        <h1 (click)="showQuestion($event)" id="{{month.monthone}}">1 month </h1>
+      </div>
+    </div>
+    <app-question-list [data]="month_1" (parentData)="parentData($event)" class="dyna" [cateMonth]='"1st Month"'>
+    </app-question-list>
+  </div>
+
+  <div *ngIf="month.monthtwo == '2'">
+    <div class="cateDiv">
+      <div class="food">
+        <h1 (click)="showQuestion($event)" id="{{month.monthtwo}}">2 month </h1>
+
+      </div>
+    </div>
+    <app-question-list [data]="month_2" class="dyna" (parentData)="parentData($event)" [cateMonth]='"2nd Month"'>
+    </app-question-list>
+  </div>
+
+  <div *ngIf="month.monththree== '3'">
+    <div class="cateDiv">
+      <div class="food">
+        <h1 (click)="showQuestion($event)" id="{{month.monththree}}">3 month </h1>
+
+      </div>
+    </div>
+    <app-question-list [data]="month_3" class="dyna" (parentData)="parentData($event)" [cateMonth]='"3rd Month"'>
+    </app-question-list>
+  </div>
+
+  <div *ngIf="month.monthfour == '4'">
+    <div class="cateDiv">
+      <div class="food">
+        <h1 (click)="showQuestion($event)" id="{{month.monthfour}}">4 month </h1>
+
+      </div>
+    </div>
+    <app-question-list [data]="month_4" class="dyna" (parentData)="parentData($event)" [cateMonth]='"4th Month"'>
+    </app-question-list>
+  </div>
+
+  <div *ngIf="month.monthfive == '5'">
+    <div class="cateDiv">
+      <div class="food">
+        <h1 (click)="showQuestion($event)" id="{{month.monthfive}}">5 month </h1>
+
+      </div>
+    </div>
+    <app-question-list [data]="month_5" class="dyna" (parentData)="parentData($event)" [cateMonth]='"5th Month"'>
+    </app-question-list>
+  </div>
+
+  <div *ngIf="month.monthsix== '6'">
+    <div class="cateDiv">
+      <div class="food">
+        <h1 (click)="showQuestion($event)" id="{{month.monthsix}}">6 month </h1>
+
+      </div>
+    </div>
+    <app-question-list [data]="month_6" class="dyna" (parentData)="parentData($event)" [cateMonth]='"6th Month"'>
+    </app-question-list>
+  </div>
+
+  <div *ngIf="month.monthseven == '7'">
+    <div class="cateDiv">
+      <div class="food">
+        <h1 (click)="showQuestion($event)" id="{{month.monthseven}}">7 month </h1>
+
+      </div>
+    </div>
+    <app-question-list [data]="month_7" class="dyna" (parentData)="parentData($event)" [cateMonth]='"7th Month"'>
+    </app-question-list>
+  </div>
+
+  <div *ngIf="month.montheight == '8'">
+    <div class="cateDiv">
+      <div class="food">
+        <h1 (click)="showQuestion($event)" id="{{month.montheight}}">8 month </h1>
+
+      </div>
+    </div>
+    <app-question-list [data]="month_8" class="dyna" (parentData)="parentData($event)" [cateMonth]='"8th Month"'>
+    </app-question-list>
+  </div>
+
+  <div *ngIf="month.monthnine == '9'">
+    <div class="cateDiv">
+      <div class="food">
+        <h1 (click)="showQuestion($event)" id="{{month.monthnine}}">9 month </h1>
+
+      </div>
+    </div>
+    <app-question-list [data]="month_9" class="dyna" (parentData)="parentData($event)" [cateMonth]='"9th Month"'>
+    </app-question-list>
+  </div>
+
+  <div *ngIf="month.monthten== '10'">
+    <div class="cateDiv">
+      <div class="food">
+        <h1 (click)="showQuestion($event)" id="{{month.monthten}}"> 10 month </h1>
+
+      </div>
+    </div>
+    <app-question-list [data]="month_10" class="dyna" (parentData)="parentData($event)" [cateMonth]='"10th Month"'>
+    </app-question-list>
+  </div>
+
+  <div *ngIf="month.montheleven == '11'">
+    <div class="cateDiv">
+      <div class="food">
+        <h1 (click)="showQuestion($event)" id="{{month.montheleven}}">11 month </h1>
+
+      </div>
+    </div>
+    <app-question-list [data]="month_11" class="dyna" (parentData)="parentData($event)" [cateMonth]='"11th Month"'>
+    </app-question-list>
+  </div>
+
+  <div *ngIf="month.monthtwelve == '12'">
+    <div class="cateDiv">
+      <div class="food">
+        <h1 (click)="showQuestion($event)" id="{{month.monthtwelve}}">12 month </h1>
+
+      </div>
+    </div>
+    <app-question-list [data]="month_12" class="dyna" (parentData)="parentData($event)" [cateMonth]='"12th Month"'>
+    </app-question-list>
+  </div>
+
+  <div *ngIf="month.monththirteen == '13'">
+    <div class="cateDiv">
+      <div class="food">
+        <h1 (click)="showQuestion($event)" id="{{month.monththirteen}}">12+ month </h1>
+
+      </div>
+    </div>
+    <app-question-list [data]="month_13" class="dyna" (parentData)="parentData($event)" [cateMonth]='"12+ Month"'>
+    </app-question-list>
+  </div>
+
+  <!-- <div *ngIf="month.monthfourteen == '14'">
+    <div class="cateDiv">
+      <div class="food">
+        <h1 (click)="showQuestion($event)" id="{{month.monthfourteen}}"> 14. Base Screen </h1>
+
+      </div>
+    </div>
+    <app-question-list [data]="month_14" class="dyna" (parentData)="parentData($event)"
+      [cateMonth]='"Base Screen Month"'>
+    </app-question-list>
+  </div> -->
+</div>
+
+<div class=" modal modal1 fade" id="exampleModal20" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" *ngIf="newEditListId">Edit Question </h5>
+        <h5 class="modal-title" id="exampleModalLabel" *ngIf="newEditListId == undefined">Create Question </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="fa fa-close"></i>
+        </button>
+      </div>
+      <form #profileFormss="ngForm" (ngSubmit)="updateQuestionList(profileFormss.value)">
+        <input type="text" name="id" ngModel="{{newEditListId}}" class="d-none">
+        <div class="mBody">
+          <p>
+            Enter the question you would like to ask and the corresponding month of the journey.
+          </p>
+          <div class="marginB">
+            <label for="week" class="d-block">Category</label>
+            <select ngModel="{{newEditListCateId}}" name="category_id" class="cateSelect">
+              <option [selected]="newEditListCateId == curr.id" value="{{curr.id}}" *ngFor="let curr of quesArr">
+                {{curr.category}}</option>
+            </select>
+            <span class="error">{{updateErrorStatus.cate_id}}</span>
+          </div>
+          <div class="marginB">
+            <label for="question" class="d-block">Question</label>
+            <textarea name="question" [(ngModel)]="newEditList" class="questionEditInput" id="question"
+              rows="5">  </textarea>
+            <span class="error">{{updateErrorStatus.quest}}</span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="{{disable ? 'disabled' : ''}}">Continue</button>
+          <button type="button" class="cancel" data-dismiss="modal">Cancel</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>

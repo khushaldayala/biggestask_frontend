@@ -1,0 +1,127 @@
+.cms .btn {
+  border: 0;
+  display: block;
+  text-align: center;
+  font-size: 1.6rem;
+  background: var(--blue-color);
+  color: #fff;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 1rem;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
+}
+.cms h1 {
+  font-size: 3.2rem;
+  color: var(--primary-font-color);
+  font-weight: 800;
+}
+.modal-content {
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+  border-radius: 2rem;
+}
+.modal-title {
+  font-size: 3rem;
+  color: var(--primary-font-color);
+  font-weight: 600;
+}
+.input label {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--secondary-font-color);
+}
+.input input,
+.input textarea,
+.input select {
+  border: 2px solid #e6e8ec;
+  border-radius: 1.2rem;
+  color: var(--secondary-font-color);
+  font-size: 1.6rem;
+  width: 100%;
+  padding: 1.2rem;
+  font-weight: 500;
+}
+.input input.disable {
+  cursor: not-allowed;
+  user-select: none;
+  pointer-events: none;
+  background: #f2f2f2;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+.modal-footer {
+  display: flex;
+  flex-direction: column;
+}
+.modal-footer button {
+  border: 0;
+  text-align: center;
+  font-size: 1.6rem;
+  background: var(--blue-color);
+  color: #fff;
+  width: 100%;
+  border-radius: 9rem;
+  cursor: pointer;
+  height: 4.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.modal-footer button:nth-child(2) {
+  border: 2px solid var(--blue-color);
+  color: var(--blue-color);
+  background: transparent;
+  margin: 0;
+}
+.close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border: 2px solid #e6e8ec;
+  border-radius: 50%;
+  font-weight: 500;
+  opacity: 1;
+}
+.close i {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+.custom {
+  margin-top: 3rem;
+  padding: 1rem;
+  background: #f0f8ff;
+  margin-bottom: 1.5rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 4px 0px;
+}
+.custom h3 {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+.layout {
+  padding: 1rem;
+  background: #f5faff;
+  margin-bottom: 0.8rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;
+}
+.layout button {
+  background: var(--blue-color);
+  color: #fff;
+  border-radius: 0.3rem;
+  font-size: 1.4rem;
+  padding: 0.5rem 2rem;
+  margin-right: 0.5rem;
+  border: 0;
+}
+.layout button:nth-child(2) {
+  background: rgb(236, 30, 30);
+}
+.layout h4 {
+  word-break: break-word;
+}
+

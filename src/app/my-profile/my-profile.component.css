@@ -1,0 +1,257 @@
+.profile {
+  font-size: 3.2rem;
+  color: var(--primary-font-color);
+  font-weight: 600;
+  margin-top: 8.8rem;
+  margin-bottom: 2.4rem;
+}
+
+.prof {
+  font-size: 1.4rem;
+  color: #777E90;
+  font-weight: 500;
+  margin-bottom: 5.6rem;
+}
+
+.prof span {
+  color: #23262F;
+}
+
+.container.custom {
+  max-width: 85rem;
+}
+
+/* LEFT   */
+
+.left {
+  background: #F9FCFF;
+  border: 1px solid #ccdef1;
+  box-shadow: 0px 4px 20px rgba(27, 25, 86, 0.07);
+  border-radius: 1.6rem;
+  padding: 4rem 2.7rem;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left .img {
+  width: 16rem;
+ height: 16rem;
+  border-radius: 50%;
+  box-shadow: 0px 40px 32px -24px rgba(15, 15, 15, 0.12);
+  margin-bottom: 3.2rem;
+}
+
+.left .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0px 40px 32px -24px rgba(15, 15, 15, 0.12);
+  border: 2px solid #F2F2F2;
+}
+
+.left h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--secondary-font-color);
+  margin-bottom: 1.3rem;
+}
+
+.left p {
+  font-size: 1.4rem;
+  text-align: center;
+  color: var(--secondary-font-color);
+  margin-bottom: 2.1rem;
+}
+
+.line {
+  height: 2px;
+  background: #e6e8ec;
+  width: 100%;
+  margin-bottom: 3.2rem;
+}
+
+.left h3 {
+  font-size: 1.6rem;
+  color: var(--blue-color);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Right  */
+.dark {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--secondary-font-color);
+}
+
+h4[data-photo] {
+  margin-bottom: 0.8rem;
+}
+
+h2.dark {
+  margin-bottom: 3.2rem;
+}
+
+p.light {
+  font-size: 1.4rem;
+  color: #777E90;
+  font-weight: 500;
+  margin-bottom: 1.6rem;
+}
+
+.input label {
+  display: block;
+  color: #B1B5C3;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.input {
+  margin-bottom: 3.2rem;
+}
+
+.input input,
+.input textarea {
+  font-size: 1.6rem;
+  color: var(--secondary-font-color);
+  font-weight: 600;
+  border-radius: 1.2rem;
+  padding: 1.2rem;
+  border: 2px solid #e6e8ec;
+  width: 100%;
+}
+
+.input input::placeholder,
+.input textarea::placeholder {
+  font-size: 1.6rem;
+  color: var(--secondary-font-color);
+  font-weight: 600;
+}
+
+.update {
+  background: var(--blue-color);
+  color: #fff;
+  padding: 1.6rem 2.4rem;
+  border-radius: 9rem;
+  font-size: 1.6rem;
+  border: 0;
+  font-weight: 500;
+  margin-bottom: 3.5rem;
+}
+
+.fileDiv input[type="file"] {
+  display: none;
+}
+
+.fileBtn {
+  border: 2px solid var(--blue-color);
+  color: var(--blue-color);
+  background: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1.3rem;
+  cursor: pointer;
+  border-radius: 9rem;
+}
+
+.fileDiv {
+  margin-bottom: 2.6rem;
+}
+
+/* Modal Design  */
+
+.modal-content {
+  padding: 1.5rem 2.2rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 0 9999999px rgba(25, 39, 88, 0.5);
+  top: 7rem;
+}
+
+.modal-title {
+  font-size: 3.2rem;
+  color: var(--primary-font-color);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0;
+}
+
+.modal-header .close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border: 2px solid #E6E8EC;
+  border-radius: 50%;
+  font-weight: 500;
+  opacity: 1;
+}
+
+.modal-header .close .fa {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.mBody p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #777E90;
+  margin-bottom: 1.6rem;
+}
+
+.mBody div.marginB {
+  margin-bottom: 1.6rem;
+}
+
+.mBody input {
+  border: 0;
+  border-bottom: 2px solid #E6E8EC;
+  color: var(--secondary-font-color);
+  font-size: 1.6rem;
+  width: 100%;
+  padding: 1.2rem;
+  font-weight: 500;
+}
+
+.mBody textarea::placeholder {
+  color: var(--secondary-font-color);
+}
+
+.modal-footer {
+  border: 0;
+  flex-direction: column;
+}
+
+.modal-footer button {
+  display: block;
+  width: 100%;
+  border: 0;
+  display: block;
+  text-align: center;
+  font-size: 1.6rem;
+  background: var(--blue-color);
+  color: #fff;
+  width: 100%;
+  border-radius: 9rem;
+  cursor: pointer;
+  height: 5.6rem;
+  margin-bottom: 2.4rem;
+  font-weight: 500;
+}
+
+.modal-footer .cancel {
+  border: 2px solid var(--blue-color);
+  color: var(--blue-color);
+  background: transparent;
+  margin: 0;
+}

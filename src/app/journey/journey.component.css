@@ -1,0 +1,260 @@
+.parentDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.6rem;
+  cursor: pointer;
+}
+
+.parentDiv div[data-flex] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div[data-flex] img {
+  width: 4.8rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 2rem;
+}
+
+.parentDiv h5 {
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--secondary-font-color);
+}
+
+.parentDiv h5 span {
+  color: var(--blue-color);
+}
+
+.parentDiv h6 {
+  color: var(--blue-color);
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.parentDiv h6.gray {
+  color: #777E90;
+}
+
+.svgImg {
+  margin-right: 0.6rem;
+  width: 0.7rem;
+}
+
+.card-header {
+  margin-top: 3.3rem;
+}
+
+.card-header .title {
+  font-size: 1.6rem;
+  color: var(--blue-color);
+  font-weight: 500;
+}
+
+.card-header .title .blue {
+  margin-right: 1.6rem;
+}
+
+.card-header .accicon {
+  float: right;
+  font-size: 1.6rem;
+  width: 1.2em;
+}
+
+.card-header {
+  cursor: pointer;
+  border-bottom: none;
+  background: transparent;
+  border: 0;
+}
+
+.card {
+  border: 0;
+  border-top: 2px solid #E6E8EC;
+  margin-bottom: 4.8rem;
+}
+
+.card-body {
+  border-top: 0 solid #ddd;
+}
+
+.card-header:not(.collapsed) .rotate-icon {
+  transition: all 0.3s linear;
+  transform: rotate(180deg);
+}
+
+.journeyBtn {
+  font-size: 1.4rem;
+  color: var(--blue-color);
+  border-radius: 9rem;
+  padding: 1.2rem 1.6rem;
+  font-weight: 600;
+  border: 2px solid var(--blue-color);
+  background: transparent;
+  margin: 2.4rem 0;
+}
+
+.journeyBtn .fa {
+  margin-right: 1.5rem;
+}
+
+.line {
+  background: #E6E8EC;
+  width: 100%;
+  height: 2px;
+}
+
+.jourRow {
+  margin-top: 6.4rem;
+}
+
+/* Left Desgin  */
+
+.left {
+  background: #F9FCFF;
+  border: 1px solid #CCDEF1;
+  box-shadow: 0px 40px 32px -24px rgba(15, 15, 15, 0.12);
+  border-radius: 1.6rem;
+  padding: 3rem 2.4rem;
+}
+
+.left h1 {
+  font-weight: 800;
+  font-size: 2.4rem;
+  color: var(--secondary-font-color);
+  margin-bottom: 1.6rem;
+}
+
+.left p {
+  font-weight: 500;
+  color: var(--secondary-font-color);
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+}
+
+.line2 {
+  background: #E6E8EC;
+  height: 2px;
+  width: 80%;
+  border-radius: 5rem;
+  margin-bottom: 2.7rem;
+}
+
+.listingDiv {
+  background-color: #fff;
+  padding: 0.8rem;
+  border-radius: 1.6rem;
+  border: 1px solid #CCDEF1;
+}
+
+/* RIght Design  */
+
+.right h1 {
+  color: var(--primary-font-color);
+  margin-bottom: 2.4rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.right p {
+  margin-bottom: 2.4rem;
+  font-size: 1.6rem;
+  color: var(--secondary-font-color);
+  font-weight: 500;
+}
+
+.modal {
+  top: -15%;
+  left: 110%;
+  width: 100%;
+  border-radius: 1.2rem;
+  right: unset;
+  bottom: unset;
+  position: absolute;
+  overflow: visible;
+}
+
+.modal-header .img {
+  width: 13rem;
+  height: 13rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 3.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.modal-header .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.modal-header h1 {
+  font-size: 1.8rem;
+  color: var(--secondary-font-color);
+  font-weight: 600;
+  margin-bottom: 2.4rem;
+}
+
+.modal-header h2 {
+  color: var(--blue-color);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 2.4rem;
+}
+
+.modal-header {
+  flex-direction: column;
+  border: 0;
+}
+
+.modal-content {
+  width: 92%;
+  border-radius: 1.2rem;
+  box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content::before {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  content: "";
+  border-top: 1rem solid;
+  border-right: 1rem solid transparent;
+  border-bottom: 0;
+  border-left: 1rem solid transparent;
+  color: #ffffff;
+  left: -2%;
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(90deg);
+  top: 10%;
+}
+
+.modal-dialog {
+  margin: 0 !important;
+}
+
+.modal-backdrop.show {
+  opacity: 0 !important;
+}
+
+.modal-backdrop {
+  opacity: 0;
+  visibility: hidden;
+  display: none !important;
+}
+
+.modal.modal1.fade.show {
+  display: block !important;
+  opacity: 1;
+  transition: opacity .15s linear;
+}
+
+.modal.modal1.fade {
+  opacity: 0;
+}

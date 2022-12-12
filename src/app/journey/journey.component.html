@@ -1,0 +1,236 @@
+<app-navbar></app-navbar>
+<section class="container">
+  <button class="journeyBtn" routerLink="/ourjourneys"> <i class="fa fa-long-arrow-left" aria-hidden="true"></i> Back to
+    Our Journeys</button>
+</section>
+<div class="line"></div>
+<section class="container position-relative">
+  <div class="row jourRow">
+    <div class="col-md-4">
+      <div class="left">
+        <h1>{{msg}}</h1>
+        <div class="line2"></div>
+        <div class="listingDiv">
+          <div class="parentDiv position-relative" id="parent" data-toggle="modal" data-target="#exampleModalParent">
+            <div class="modal modal1 fade" id="exampleModalParent" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <div class="img" *ngIf="journeyData.journy[0]?.parent_image1">
+                      <img src="{{journeyData.journy[0]?.parent_image1}}" alt="humanImage">
+                    </div>
+                    <div class="img"
+                      *ngIf="!journeyData.journy[0]?.parent_image1 && journeyData.journy[0]?.parent_gender ">
+                      <img src="../../assets/Images/{{journeyData.journy[0]?.parent_gender}}.png" alt="human">
+                    </div>
+                    <div class="img"
+                      *ngIf="!journeyData.journy[0].parent_image1 && !journeyData.journy[0].parent_gender ">
+                      <img src="../../assets/Images/other.png" alt="humanDefault">
+                    </div>
+                    <h1>Parent #1</h1>
+                    <h2>{{journeyData.journy[0]?.parent_name}}</h2>
+                    <h2>{{journeyData.journy[0]?.parent_number}}</h2>
+                    <h2>{{journeyData.journy[0]?.parent_email}}</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-flex>
+              <div *ngIf="journeyData.journy[0]?.parent_image1">
+                <img src="{{journeyData.journy[0]?.parent_image1}}" alt="human">
+              </div>
+              <div class="img" *ngIf="!journeyData.journy[0]?.parent_image1 && journeyData.journy[0]?.parent_gender ">
+                <img src="../../assets/Images/{{journeyData.journy[0]?.parent_gender}}.png" alt="human">
+              </div>
+              <div class="img" *ngIf="!journeyData.journy[0].parent_image1 && !journeyData.journy[0].parent_gender ">
+                <img src="../../assets/Images/other.png" alt="humanDefault">
+              </div>
+              <div>
+                <h5>Parent #1 </h5>
+                <h6>{{journeyData.journy[0]?.parent_name}}</h6>
+              </div>
+            </div>
+            <div>
+              <img class="svgImg" src="../../assets/Images/Shape.svg" alt="svg">
+            </div>
+          </div>
+          <div class="parentDiv position-relative" id="partner" data-toggle="modal" data-target="#exampleModalPartner">
+            <div class="modal modal1 fade" id="exampleModalPartner" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <div class="img" *ngIf="journeyData.journy[0]?.parent_image2">
+                      <img src="{{journeyData.journy[0]?.parent_image2}}" alt="humanImage">
+                    </div>
+                    <div class="img"
+                      *ngIf="!journeyData.journy[0]?.parent_image2 && journeyData.journy[0].parent_partner_gender">
+                      <img src="../../assets/Images/{{journeyData.journy[0]?.parent_partner_gender}}.png" alt="human">
+                    </div>
+                    <div class="img"
+                      *ngIf="!journeyData.journy[0]?.parent_image2 && !journeyData.journy[0].parent_partner_gender">
+                      <img src="../../assets/Images/other.png" alt="humanDefault">
+                    </div>
+                    <h1>Parent #2</h1>
+                    <h2>{{journeyData.journy[0]?.parent_partner_name}}</h2>
+                    <h2>{{journeyData.journy[0]?.parent_partner_phone}}</h2>
+                    <h2>{{journeyData.journy[0]?.parent_email}}</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-flex>
+              <div *ngIf="journeyData.journy[0]?.parent_image2">
+                <img src="{{journeyData.journy[0]?.parent_image2}}" alt="human">
+              </div>
+              <div class="img"
+                *ngIf="!journeyData.journy[0]?.parent_image2 && journeyData.journy[0].parent_partner_gender">
+                <img src="../../assets/Images/{{journeyData.journy[0]?.parent_partner_gender}}.png" alt="human">
+              </div>
+              <div class="img"
+                *ngIf="!journeyData.journy[0]?.parent_image2 && !journeyData.journy[0].parent_partner_gender">
+                <img src="../../assets/Images/other.png" alt="humanDefault">
+              </div>
+              <div>
+                <h5>Parent #2 </h5>
+                <h6>{{journeyData.journy[0]?.parent_partner_name}}</h6>
+              </div>
+            </div>
+            <div>
+              <img class="svgImg" src="../../assets/Images/Shape.svg" alt="svg">
+            </div>
+          </div>
+          <div class="parentDiv position-relative" id="surrogate" data-toggle="modal"
+            data-target="#exampleModalSurrogate">
+            <div class="modal modal1 fade" id="exampleModalSurrogate" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <div class="img" *ngIf="journeyData.journy[0]?.image1">
+                      <img src="{{journeyData.journy[0]?.image1}}" alt="humanImage">
+                    </div>
+                    <div class="img" *ngIf="!journeyData.journy[0]?.image1 && journeyData.journy[0].gender">
+                      <img src="../../assets/Images/{{journeyData.journy[0]?.gender}}.png" alt="human">
+                    </div>
+                    <div class="img" *ngIf="!journeyData.journy[0]?.image1 && !journeyData.journy[0].gender">
+                      <img src="../../assets/Images/other.png" alt="humanDefault">
+                    </div>
+                    <h1>Surrogate</h1>
+                    <h2>{{journeyData.journy[0]?.name}}</h2>
+                    <h2>{{journeyData.journy[0]?.number}}</h2>
+                    <h2>{{journeyData.journy[0]?.email}}</h2>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-flex>
+              <div *ngIf="journeyData.journy[0]?.image1">
+                <img src="{{journeyData.journy[0]?.image1}}" alt="human">
+              </div>
+              <div class="img" *ngIf="!journeyData.journy[0]?.image1 && journeyData.journy[0].gender">
+                <img src="../../assets/Images/{{journeyData.journy[0]?.gender}}.png" alt="human">
+              </div>
+              <div class="img" *ngIf="!journeyData.journy[0]?.image1 && !journeyData.journy[0].gender">
+                <img src="../../assets/Images/other.png" alt="humanDefault">
+              </div>
+              <div>
+                <h5>Surrogate </h5>
+                <h6>{{journeyData.journy[0]?.name}}</h6>
+              </div>
+            </div>
+            <div>
+              <img class="svgImg" src="../../assets/Images/Shape.svg" alt="svg">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="right">
+        <h1>Milestones for {{msg}} </h1>
+        <p>Below are the milestones and other appointments associated with this journey. Please note that Dates and Times are entered by the surrogate and both IPs and surrogates may send you notes.</p>
+        <div class="accordion" id="accordionExample{{i}}" *ngFor="let curr of milestones , let i = index">
+          <div class="card">
+            <div class="card-header" data-toggle="collapse" [attr.data-target]="'#collapseOne'+i" aria-expanded="true">
+              <span class="title"> <span class="blue">{{i + 1}}</span> {{curr.milestone}} <span
+                  *ngIf="curr.date">({{curr.date}})</span> <span *ngIf="!curr.date">(Date not yet decided)</span>
+              </span>
+              <span class="accicon"><i class="fa fa-chevron-down rotate-icon" aria-hidden="true"></i></span>
+            </div>
+            <div id="collapseOne{{i}}" class="collapse show" [attr.data-parent]="'#accordionExample'+i">
+              <div class="card-body">
+                <div class="parentDiv">
+                  <div data-flex>
+                    <div *ngIf="journeyData.journy[0]?.parent_image1">
+                      <img src="{{journeyData.journy[0]?.parent_image1}}" alt="human">
+                    </div>
+                    <div *ngIf="!journeyData.journy[0]?.parent_image1 && journeyData.journy[0]?.parent_gender">
+                      <img src="../../assets/Images/{{journeyData.journy[0]?.parent_gender}}.png" alt="human">
+                    </div>
+                    <div *ngIf="!journeyData.journy[0]?.parent_image1 && !journeyData.journy[0].parent_gender">
+                      <img src="../../assets/Images/other.png" alt="humanDefault">
+                    </div>
+                    <div>
+                      <h5>Parent #1 <span>({{journeyData.journy[0]?.parent_name}})</span> </h5>
+                      <h6 class="gray" *ngIf="curr.share_note_with_biggestask_status == 1"> {{curr.parent_note}} </h6>
+                      <h6 class="gray" *ngIf="curr.share_note_with_biggestask_status == 0"> (No Notes available!) </h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="parentDiv">
+                  <div data-flex>
+                    <div *ngIf="journeyData.journy[0]?.parent_image2">
+                      <img src="{{journeyData.journy[0]?.parent_image2}}" alt="human">
+                    </div>
+                    <div *ngIf="!journeyData.journy[0]?.parent_image2 && journeyData.journy[0]?.parent_partner_gender">
+                      <img src="../../assets/Images/{{journeyData.journy[0]?.parent_partner_gender}}.png" alt="human">
+                    </div>
+                    <div *ngIf="!journeyData.journy[0]?.parent_image2 && !journeyData.journy[0].parent_partner_gender">
+                      <img src="../../assets/Images/other.png" alt="humanDefault">
+                    </div>
+                    <div>
+                      <h5>Parent #2 <span>({{journeyData.journy[0]?.parent_partner_name}})</span> </h5>
+                      <h6 class="gray" *ngIf="curr.share_note_with_biggestask_status == 1"> {{curr.parent_note}} </h6>
+                      <h6 class="gray" *ngIf="curr.share_note_with_biggestask_status == 0"> (No Notes available!) </h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="parentDiv">
+                  <div data-flex>
+                    <div *ngIf="journeyData.journy[0]?.image1">
+                      <img src="{{journeyData.journy[0]?.image1}}" alt="human">
+                    </div>
+                    <div *ngIf="!journeyData.journy[0]?.image1 && journeyData.journy[0]?.gender">
+                      <img src="../../assets/Images/{{journeyData.journy[0]?.gender}}.png" alt="human">
+                    </div>
+                    <div *ngIf="!journeyData.journy[0]?.parent_image2 && !journeyData.journy[0].gender">
+                      <img src="../../assets/Images/other.png" alt="humanDefault">
+                    </div>
+                    <div>
+                      <h5> Surrogate <span>({{journeyData.journy[0]?.name}})</span> </h5>
+                      <h6 class="gray" *ngIf="curr.surrogate_share_note_with_biggestask_status == 1">
+                        {{curr.surrogate_note}} </h6>
+                      <h6 class="gray" *ngIf="curr.surrogate_share_note_with_biggestask_status == 0"> (No Notes
+                        available!) </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal  -->
+
+
+
+
+</section>

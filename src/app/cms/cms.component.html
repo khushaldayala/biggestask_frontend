@@ -1,0 +1,251 @@
+<app-navbar> </app-navbar>
+<div class="container cms">
+  <div class="d-flex justify-content-between align-item-center mt-5">
+    <h1>Content Managment System</h1>
+    <button class="btn" data-toggle="modal" data-target="#exampleModalCentercms" (click)="add()">Add+</button>
+  </div>
+  <div class="row custom">
+    <div class="col-md-3">
+      <h3>Screen Number</h3>
+    </div>
+    <div class="col-md-3">
+      <h3>Title</h3>
+    </div>
+    <div class="col-md-4">
+      <h3>Information</h3>
+    </div>
+  </div>
+  <div class="row layout" *ngFor="let curr of getCmsData">
+    <div class="col-md-3">
+      <h4>{{curr.screen}}</h4>
+    </div>
+    <div class="col-md-3">
+      <h4>{{curr.title}}</h4>
+    </div>
+    <div class="col-md-4">
+      <h4>{{curr.info}}</h4>
+    </div>
+    <div class="col-md-2">
+      <button id="{{curr.id}}" data-toggle="modal" data-target="#exampleModalCentercms"
+        (click)="edit($event)">Edit</button>
+      <button (click)="delete($event)" id="{{curr.id}}">Delete</button>
+    </div>
+  </div>
+
+  <!-- About App  -->
+
+  <div class="d-flex justify-content-between align-item-center mt-5">
+    <h1>About App</h1>
+    <button class="btn" data-toggle="modal" data-target="#exampleModalCenterAboutApp" (click)="addAboutApp()">Add+</button>
+  </div>
+
+  <div class="row custom">
+    <div class="col-md-3">
+      <h3>#</h3>
+    </div>
+    <div class="col-md-3">
+      <h3>Title</h3>
+    </div>
+    <div class="col-md-4">
+      <h3>Information</h3>
+    </div>
+  </div>
+  <div class="row layout" *ngFor="let curr of getAboutAppData , let i = index">
+    <div class="col-md-3">
+      <h4>{{i + 1}}</h4>
+    </div>
+    <div class="col-md-3">
+      <h4>{{curr.title}}</h4>
+    </div>
+    <div class="col-md-4">
+      <h4>{{curr.info}}</h4>
+    </div>
+    <div class="col-md-2">
+      <button id="{{curr.id}}" data-toggle="modal" data-target="#exampleModalCenterAboutApp"
+        (click)="edit($event)">Edit</button>
+      <button (click)="delete($event)" id="{{curr.id}}">Delete</button>
+    </div>
+  </div>
+
+  <!--  Terms Service  -->
+
+  <div class="d-flex justify-content-between align-item-center mt-5">
+    <h1>Terms of Service</h1>
+  </div>
+
+  <div class="row custom">
+    <div class="col-md-3">
+      <h3>#</h3>
+    </div>
+    <div class="col-md-3">
+      <h3>Title</h3>
+    </div>
+    <div class="col-md-4">
+      <h3>Information</h3>
+    </div>
+  </div>
+  <div class="row layout" *ngFor="let curr of getTermsServiceData , let i = index">
+    <div class="col-md-3">
+      <h4>{{i + 1}}</h4>
+    </div>
+    <div class="col-md-3">
+      <h4>{{curr.title}}</h4>
+    </div>
+    <div class="col-md-4">
+      <h4>{{curr.info}}</h4>
+    </div>
+    <div class="col-md-2">
+      <button id="{{curr.id}}" data-toggle="modal" data-target="#exampleModalCenterAboutApp"
+        (click)="edit($event)">Edit</button>
+      <button (click)="delete($event)" id="{{curr.id}}">Delete</button>
+    </div>
+  </div>
+
+  <!-- Privacy Policy  -->
+
+  <div class="d-flex justify-content-between align-item-center mt-5">
+    <h1>Privacy Policy</h1>
+  </div>
+
+  <div class="row custom">
+    <div class="col-md-3">
+      <h3>#</h3>
+    </div>
+    <div class="col-md-3">
+      <h3>Title</h3>
+    </div>
+    <div class="col-md-4">
+      <h3>Information</h3>
+    </div>
+  </div>
+  <div class="row layout" *ngFor="let curr of getPrivacyPolicyData , let i = index">
+    <div class="col-md-3">
+      <h4>{{i + 1}}</h4>
+    </div>
+    <div class="col-md-3">
+      <h4>{{curr.title}}</h4>
+    </div>
+    <div class="col-md-4">
+      <h4>{{curr.info}}</h4>
+    </div>
+    <div class="col-md-2">
+      <button id="{{curr.id}}" data-toggle="modal" data-target="#exampleModalCenterAboutApp"
+        (click)="edit($event)">Edit</button>
+      <button (click)="delete($event)" id="{{curr.id}}">Delete</button>
+    </div>
+  </div>
+
+  <!-- Questions Bank  -->
+
+  <div class="d-flex justify-content-between align-item-center mt-5">
+    <h1>Question Bank</h1>
+  </div>
+
+  <div class="row custom">
+    <div class="col-md-3">
+      <h3>#</h3>
+    </div>
+    <div class="col-md-7">
+      <h3>Information</h3>
+    </div>
+  </div>
+  <div class="row layout" *ngFor="let curr of getQuestionBank , let i = index">
+    <div class="col-md-3">
+      <h4>{{i + 1}}</h4>
+    </div>
+    <div class="col-md-7">
+      <h4>{{curr.info}}</h4>
+    </div>
+    <div class="col-md-2">
+      <button id="{{curr.id}}" data-toggle="modal" data-target="#exampleModalCenterAboutApp"
+        (click)="edit($event)">Edit</button>
+      <button (click)="delete($event)" id="{{curr.id}}">Delete</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCentercms" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle" *ngIf="editId">Edit</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle" *ngIf="editId == '0'">Add</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></span>
+        </button>
+      </div>
+      <form #form="ngForm" (ngSubmit)="handleForm(form.value)">
+        <input type="text" class="d-none" name="id" ngModel="{{editId}}">
+        <input type="text" class="d-none" name="info_type" ngModel="intro_screen">
+        <div class="modal-body">
+          <div class="input">
+            <label for="screen">Screen Number</label>
+            <input type="number" ngModel="{{screen}}" name="screen" id="screen" placeholder="Add a number"
+              class="{{editId ? 'disable' : ''}}" />
+            <span class="error">{{errorResponse.screen}}</span>
+          </div>
+          <div class="input">
+            <label for="title">Title</label>
+            <input type="text" ngModel="{{title}}" name="title" id="title" placeholder="Add a title" />
+            <span class="error">{{errorResponse.title}}</span>
+          </div>
+          <div class="input">
+            <label for="info">Information</label>
+            <textarea name="info" ngModel="{{info}}" id="info" rows="5" placeholder="info.."></textarea>
+            <span class="error">{{errorResponse.info}}</span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="{{disable ? 'disabled' : ''}}">Save changes</button>
+          <button type="button" data-dismiss="modal">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModalCenterAboutApp" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle" *ngIf="editId">Edit</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle" *ngIf="editId == '0'">Add</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></span>
+        </button>
+      </div>
+      <form #forms="ngForm" (ngSubmit)="handleAboutAppForm(forms.value)">
+        <input type="text" class="d-none" name="id" ngModel="{{editId}}">
+        <div class="modal-body">
+          <div class="input">
+            <label for="screen">Category</label>
+            <select (change)="changeSelect($event)" name="info_type" ngModel="{{info_type}}">
+              <option [selected]="info_type" value="">Select</option>
+              <option [selected]="info_type" value="about_app">About App</option>
+              <option [selected]="info_type" value="terms_of_service">Terms of Service</option>
+              <option [selected]="info_type" value="privacy_policy">Privacy Policy</option>
+              <option [selected]="info_type" value="question_bank">Question Bank</option>
+            </select>
+            <span class="error">{{aboutErrorResponse.select}}</span>
+          </div>
+          <div class="input" *ngIf="select">
+            <label for="title">Title</label>
+            <input type="text" ngModel="{{title_App}}" name="title" id="title" placeholder="Add a title" />
+            <span class="error">{{aboutErrorResponse.title}}</span>
+          </div>
+          <div class="input">
+            <label for="info">Information</label>
+            <textarea name="info" ngModel="{{info_App}}" id="info" rows="5" placeholder="info.."></textarea>
+            <span class="error">{{aboutErrorResponse.info}}</span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="{{disable ? 'disabled' : ''}}">Save changes</button>
+          <button type="button" data-dismiss="modal">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

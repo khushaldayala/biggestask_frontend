@@ -1,0 +1,98 @@
+<app-navbar> </app-navbar>
+<section class="container">
+  <div class="jFlex">
+    <h1>Our Journeys</h1>
+    <div class="d-flex ml-auto">
+      <div class="position-relative">
+        <input type="text" name="search" id="search" placeholder="Search Clients" [(ngModel)]="searchText">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="selectDiv">
+        Sort By :
+        <select class="select" (change)="getJourneyBySorting($event)" (click)="sortJourney($event)">
+          <option value="ASC">Oldest</option>
+          <option value="DESC">Latest</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let curr of JourneyData | filter:searchText ; let i = index">
+      <div class="cardDiv" (click)="newMsg($event)" routerLink="/journey/{{curr.id}}">
+        <div class="journey p-None">
+          <h1 class="trackH1 " *ngIf="booleanJourney == true " >Journey #{{i + 1}}</h1>
+          <h1 class="trackH1 " *ngIf="booleanJourney == false " >Journey #{{journeyLength - i}}</h1>
+          <div class=" dots d-flex-jcc-aic ">
+            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+          </div>
+        </div>
+        <h3 class="p-None" *ngIf="!milestoneTitle[0 + i]?.title">
+          Next Milestone:(No milestone)
+        </h3>
+        <h3 class="p-None" *ngIf="milestoneTitle[0 + i]?.title">
+          <div>
+            Next Milestone: {{milestoneTitle[0 + i]['title']}}
+          </div>
+          <a *ngIf="milestoneDate[0 + i]['date']"> ({{" " + date + " " + actualMonth + " " + y + "," + " " +
+            formatTime}})</a>
+          <a *ngIf="!milestoneDate[0 + i]['date']"> (No milestone date available)</a>
+        </h3>
+
+
+        <div class="parentDiv p-None ">
+          <div data-flex>
+            <div *ngIf="curr.parent_image1">
+              <img src="{{curr.parent_image1}}" alt="human">
+            </div>
+            <div *ngIf="!curr.parent_image1 && curr.parent_gender ">
+              <img src="../../assets/Images/{{curr.parent_gender}}.png" alt="humanDefault">
+            </div>
+            <div *ngIf="!curr.parent_gender && !curr.parent_image1">
+              <img src="../../assets/Images/other.png" alt="humanDefault">
+            </div>
+            <div>
+              <h5>Parent #1 </h5>
+              <h6>{{curr.parent_name}}</h6>
+            </div>
+          </div>
+
+        </div>
+        <div class="parentDiv p-None ">
+          <div data-flex>
+            <div *ngIf="curr.parent_image2">
+              <img src="{{curr.parent_image2}}" alt="human">
+            </div>
+            <div *ngIf="!curr.parent_image2 && curr.parent_partner_gender">
+              <img src="../../assets/Images/{{curr.parent_partner_gender}}.png" alt="humanGenderDefault">
+            </div>
+            <div *ngIf="!curr.parent_partner_gender && !curr.parent_image2">
+              <img src="../../assets/Images/other.png" alt="humanDefault">
+            </div>
+            <div>
+              <h5>Parent #2</h5>
+              <h6>{{curr.parent_partner_name}}</h6>
+            </div>
+          </div>
+
+        </div>
+        <div class="parentDiv p-None">
+          <div data-flex>
+            <div *ngIf="curr.image1">
+              <img src="{{curr.image1}}" alt="human">
+            </div>
+            <div *ngIf="!curr.image1 && curr.gender">
+              <img src="../../assets/Images/{{curr.gender}}.png" alt="humanDefault">
+            </div>
+            <div *ngIf="!curr.gender && !curr.image1">
+              <img src="../../assets/Images/other.png" alt="humanDefault">
+            </div>
+            <div>
+              <h5>surrogate</h5>
+              <h6>{{curr.name}}</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
